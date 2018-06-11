@@ -32,16 +32,16 @@
 	    accessToken: 'pk.eyJ1IjoiZGllZ291bml2ZXNwIiwiYSI6ImNqaTk4OTY4MjBxeGEzcG1sb3ZrZGk5d3oifQ.TfMiRYJEE-j_vCXyPu8mEw'
 	}).addTo(map);
 
-	$(window).on("resize load", function () {
+	$(window).on("load", function () {
 		$("#map").height($(window).height()-100);
-	}).trigger("resize");
+	}).trigger("load");
 
 	$(window).on("load", function(){
 
 		jQuery.ajax({
 		        type: "GET",
-		        url: "http://sibh.daee.sp.gov.br/api/postos",
-		        data: params,
+		        url: "https://thingproxy.freeboard.io/fetch/http://sibh.daee.sp.gov.br/api/postos",
+		        data: [],
 		        cache: true,
 		        dataType: 'html',
 		        beforeSend: function()
