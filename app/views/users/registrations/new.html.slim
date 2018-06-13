@@ -1,6 +1,6 @@
 .row
   .columns
-    h2 = title("Sign up")
+    h2 = title("Inscrição")
 
 .row
   .medium-5.columns
@@ -9,11 +9,10 @@
         url: registration_path(resource_name) do |f|
 
       legend
-        | Create your
+        | Crie sua conta de acesso ao
         '
-        strong Rails Base example site
+        strong SACE
         '
-        | account
 
       .form-inputs
         = f.input :full_name, required: true, autofocus: true
@@ -22,7 +21,7 @@
         = f.input :password_confirmation, required: true
 
       .form-actions
-        = f.button :submit, "Sign up"
+        = f.button :submit, "Inscrever-se"
 
   .medium-5.medium-offset-1.columns.end
     = render "users/shared/links"

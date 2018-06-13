@@ -1,0 +1,21 @@
+pt-BR:
+  flash:
+    devise:
+      passwords:
+        create:
+          alert: "A senha não pode ser definida"
+        update:
+          alert: "A senha não pode ser alterada"
+      confirmations:
+        create:
+          alert: "Confirmações não poderam ser enviadas"
+    actions:
+      create:
+        notice: '%{resource_name} criado com sucesso!'
+        alert: '%{resource_name} não pode ser criado!'
+      update:
+        notice: '%{resource_name} foi atualizado com sucesso.'
+        alert: '%{resource_name} não pode ser atualizado.'
+      destroy:
+        notice: '%{resource_name} foi excluído com sucesso.'
+        alert: '%{resource_name} não pode foi excluído.'

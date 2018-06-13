@@ -21,7 +21,7 @@ module RailsBase
 
     # The default locale is :en and all translations from config/locales/*.rb,yml are auto loaded.
     config.i18n.load_path += Dir[Rails.root.join("config", "locales", "**", "*.{rb,yml}")]
-    # config.i18n.default_locale = :de
+    config.i18n.default_locale = 'pt-BR'
 
     # Enable deflate / gzip compression of controller-generated responses
     config.middleware.use Rack::Deflater

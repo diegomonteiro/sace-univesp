@@ -1,6 +1,6 @@
 .row
   .columns
-    h2 = title("Sign in")
+    h2 = title("Acessar o SACE")
 
 .row
   .medium-5.columns
@@ -9,11 +9,11 @@
         url: session_path(resource_name) do |f|
 
       legend
-        | Enter your
+        | Acesse o
         '
-        strong Rails Base example site
+        strong SACE
         '
-        | account
+        | com suas credenciais
 
       .form-inputs
         = f.input :email, required: false, autofocus: true
@@ -21,7 +21,7 @@
         = f.input :remember_me, as: :boolean
 
       .form-actions
-        = f.button :submit, "Sign in"
+        = f.button :submit, "Acessar"
 
   .medium-5.medium-offset-1.columns.end
     = render "users/shared/links"

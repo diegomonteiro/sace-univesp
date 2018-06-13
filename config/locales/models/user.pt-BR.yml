@@ -1,0 +1,22 @@
+pt-BR:
+  active_record:
+    models:
+      user:
+    attributes:
+      user:
+        full_name: Insira seu nome completo
+  simple_form:
+    labels:
+      user:
+        new:
+          full_name: Insira seu nome completo
+          email: Insira seu endereço de email
+        edit:
+          full_name: Insira seu nome completo
+          password: Insira sua nova senha
+          password_confirmation: Confirme sua nova senha
+    hints:
+      user:
+        edit:
+          password: Deixe em branco caso não queira alterar
+          current_password: Insira sua senha atual para confirmar as alterações

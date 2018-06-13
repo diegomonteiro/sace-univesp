@@ -47,6 +47,9 @@ gem "rollbar"
 gem "seedbank"
 gem "stackprof"
 
+#Locators
+gem 'devise-i18n'
+
 group :staging, :production do
   gem "newrelic_rpm"
 end
