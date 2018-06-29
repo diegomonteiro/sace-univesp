@@ -1,0 +1,24 @@
+p#notice = notice
+
+p
+  strong Station:
+  = @flood_datum.station
+p
+  strong Date:
+  = @flood_datum.date
+p
+  strong Level:
+  = @flood_datum.level
+p
+  strong Flow rate:
+  = @flood_datum.flow_rate
+p
+  strong Source data:
+  = @flood_datum.source_data
+p
+  strong Source data url:
+  = @flood_datum.source_data_url
+
+= link_to 'Edit', edit_flood_datum_path(@flood_datum)
+'|
+= link_to 'Back', flood_data_path

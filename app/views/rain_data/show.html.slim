@@ -1,0 +1,21 @@
+p#notice = notice
+
+p
+  strong Station:
+  = @rain_datum.station
+p
+  strong Date:
+  = @rain_datum.date
+p
+  strong Rain:
+  = @rain_datum.rain
+p
+  strong Source data:
+  = @rain_datum.source_data
+p
+  strong Source data url:
+  = @rain_datum.source_data_url
+
+= link_to 'Edit', edit_rain_datum_path(@rain_datum)
+'|
+= link_to 'Back', rain_data_path

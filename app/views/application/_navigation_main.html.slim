@@ -2,4 +2,6 @@
   ul.menu
     li = link_to "SACE", root_path
     - if user_signed_in?
-      = active_link_to "Home", root_path, active: :exclusive, wrap_tag: :li
+      = active_link_to "Mapa Principal", root_path, active: :exclusive, wrap_tag: :li
+    li = link_to "Alertas", "#"
+    li = link_to "Cadastros", "#"

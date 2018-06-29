@@ -1,0 +1,27 @@
+= form_for @flood_datum do |f|
+  - if @flood_datum.errors.any?
+    #error_explanation
+      h2 = "#{pluralize(@flood_datum.errors.count, "error")} prohibited this flood_datum from being saved:"
+      ul
+        - @flood_datum.errors.full_messages.each do |message|
+          li = message
+
+  .field
+    = f.label :station
+    = f.text_field :station
+  .field
+    = f.label :date
+    = f.datetime_select :date
+  .field
+    = f.label :level
+    = f.text_field :level
+  .field
+    = f.label :flow_rate
+    = f.text_field :flow_rate
+  .field
+    = f.label :source_data
+    = f.text_field :source_data
+  .field
+    = f.label :source_data_url
+    = f.text_field :source_data_url
+  .actions = f.submit

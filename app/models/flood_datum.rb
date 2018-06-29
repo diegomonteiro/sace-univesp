@@ -1,0 +1,2 @@
+class FloodDatum < ApplicationRecord
+end

@@ -1,0 +1,29 @@
+h1 Listing rain_data
+
+table
+  thead
+    tr
+      th Station
+      th Date
+      th Rain
+      th Source data
+      th Source data url
+      th
+      th
+      th
+
+  tbody
+    - @rain_data.each do |rain_datum|
+      tr
+        td = rain_datum.station
+        td = rain_datum.date
+        td = rain_datum.rain
+        td = rain_datum.source_data
+        td = rain_datum.source_data_url
+        td = link_to 'Show', rain_datum
+        td = link_to 'Edit', edit_rain_datum_path(rain_datum)
+        td = link_to 'Destroy', rain_datum, data: { confirm: 'Are you sure?' }, method: :delete
+
+br
+
+= link_to 'New Rain datum', new_rain_datum_path

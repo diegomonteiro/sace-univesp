@@ -46,9 +46,15 @@ gem "responders"
 gem "rollbar"
 gem "seedbank"
 gem "stackprof"
+gem "rest-client"
+gem 'sidekiq', '~> 5.1', '>= 5.1.3'
+gem 'crono'
 
 #Locators
 gem 'devise-i18n'
+
+#Scheduler
+gem 'whenever', require: false
 
 group :staging, :production do
   gem "newrelic_rpm"

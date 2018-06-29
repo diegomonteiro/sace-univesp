@@ -1,0 +1,31 @@
+h1 Listing flood_data
+
+table
+  thead
+    tr
+      th Station
+      th Date
+      th Level
+      th Flow rate
+      th Source data
+      th Source data url
+      th
+      th
+      th
+
+  tbody
+    - @flood_data.each do |flood_datum|
+      tr
+        td = flood_datum.station
+        td = flood_datum.date
+        td = flood_datum.level
+        td = flood_datum.flow_rate
+        td = flood_datum.source_data
+        td = flood_datum.source_data_url
+        td = link_to 'Show', flood_datum
+        td = link_to 'Edit', edit_flood_datum_path(flood_datum)
+        td = link_to 'Destroy', flood_datum, data: { confirm: 'Are you sure?' }, method: :delete
+
+br
+
+= link_to 'New Flood datum', new_flood_datum_path
