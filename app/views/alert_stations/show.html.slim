@@ -1,0 +1,33 @@
+p#notice = notice
+
+p
+  strong Station:
+  = @alert_station.station
+p
+  strong Alert status:
+  = @alert_station.alert_status
+p
+  strong Date:
+  = @alert_station.date
+p
+  strong Description:
+  = @alert_station.description
+p
+  strong Region:
+  = @alert_station.region
+p
+  strong Severity:
+  = @alert_station.severity
+p
+  strong Coordinates:
+  = @alert_station.coordinates
+p
+  strong Verified:
+  = @alert_station.verified
+p
+  strong Verified for user:
+  = @alert_station.verified_for_user
+
+= link_to 'Edit', edit_alert_station_path(@alert_station)
+'|
+= link_to 'Back', alert_stations_path

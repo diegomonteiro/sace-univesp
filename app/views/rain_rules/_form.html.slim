@@ -1,0 +1,42 @@
+= form_for @rain_rule do |f|
+  - if @rain_rule.errors.any?
+    #error_explanation
+      h2 = "#{pluralize(@rain_rule.errors.count, "error")} prohibited this rain_rule from being saved:"
+      ul
+        - @rain_rule.errors.full_messages.each do |message|
+          li = message
+
+  .field
+    = f.label :station
+    = f.text_area :station
+  .field
+    = f.label :start_date
+    = f.datetime_field :start_date
+  .field
+    = f.label :end_date
+    = f.datetime_field :end_date
+  .field
+    = f.label :without_expiration
+    = f.check_box :without_expiration
+  .field
+    = f.label :operation
+    = f.text_field :operation
+  .field
+    = f.label :reference_value
+    = f.text_field :reference_value
+  .field
+    = f.label :range_value_ini
+    = f.text_field :range_value_ini
+  .field
+    = f.label :range_value_end
+    = f.text_field :range_value_end
+  .field
+    = f.label :nickname
+    = f.text_field :nickname
+  .field
+    = f.label :description
+    = f.text_area :description
+  .field
+    = f.label :enable
+    = f.check_box :enable
+  .actions = f.submit

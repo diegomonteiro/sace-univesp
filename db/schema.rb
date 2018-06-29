@@ -10,10 +10,24 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180629023843) do
+ActiveRecord::Schema.define(version: 20180629040124) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "alert_stations", force: :cascade do |t|
+    t.string "station"
+    t.string "alert_status"
+    t.datetime "date"
+    t.text "description"
+    t.text "region"
+    t.string "severity"
+    t.text "coordinates"
+    t.boolean "verified"
+    t.string "verified_for_user"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "crono_jobs", force: :cascade do |t|
     t.string "job_id", null: false
@@ -36,12 +50,44 @@ ActiveRecord::Schema.define(version: 20180629023843) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "flood_rules", force: :cascade do |t|
+    t.text "station"
+    t.datetime "start_date"
+    t.datetime "end_date"
+    t.boolean "without_expiration"
+    t.string "operation"
+    t.float "reference_value"
+    t.float "range_value_ini"
+    t.float "range_value_end"
+    t.string "nickname"
+    t.text "description"
+    t.boolean "enable"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "rain_data", force: :cascade do |t|
     t.string "station"
     t.datetime "date"
     t.float "rain"
     t.string "source_data"
     t.string "source_data_url"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "rain_rules", force: :cascade do |t|
+    t.text "station"
+    t.datetime "start_date"
+    t.datetime "end_date"
+    t.boolean "without_expiration"
+    t.string "operation"
+    t.float "reference_value"
+    t.float "range_value_ini"
+    t.float "range_value_end"
+    t.string "nickname"
+    t.text "description"
+    t.boolean "enable"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

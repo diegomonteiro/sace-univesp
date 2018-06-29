@@ -1,0 +1,37 @@
+h1 Listing alert_stations
+
+table
+  thead
+    tr
+      th Station
+      th Alert status
+      th Date
+      th Description
+      th Region
+      th Severity
+      th Coordinates
+      th Verified
+      th Verified for user
+      th
+      th
+      th
+
+  tbody
+    - @alert_stations.each do |alert_station|
+      tr
+        td = alert_station.station
+        td = alert_station.alert_status
+        td = alert_station.date
+        td = alert_station.description
+        td = alert_station.region
+        td = alert_station.severity
+        td = alert_station.coordinates
+        td = alert_station.verified
+        td = alert_station.verified_for_user
+        td = link_to 'Show', alert_station
+        td = link_to 'Edit', edit_alert_station_path(alert_station)
+        td = link_to 'Destroy', alert_station, data: { confirm: 'Are you sure?' }, method: :delete
+
+br
+
+= link_to 'New Alert station', new_alert_station_path

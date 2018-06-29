@@ -1,0 +1,39 @@
+p#notice = notice
+
+p
+  strong Station:
+  = @rain_rule.station
+p
+  strong Start date:
+  = @rain_rule.start_date
+p
+  strong End date:
+  = @rain_rule.end_date
+p
+  strong Without expiration:
+  = @rain_rule.without_expiration
+p
+  strong Operation:
+  = @rain_rule.operation
+p
+  strong Reference value:
+  = @rain_rule.reference_value
+p
+  strong Range value ini:
+  = @rain_rule.range_value_ini
+p
+  strong Range value end:
+  = @rain_rule.range_value_end
+p
+  strong Nickname:
+  = @rain_rule.nickname
+p
+  strong Description:
+  = @rain_rule.description
+p
+  strong Enable:
+  = @rain_rule.enable
+
+= link_to 'Edit', edit_rain_rule_path(@rain_rule)
+'|
+= link_to 'Back', rain_rules_path

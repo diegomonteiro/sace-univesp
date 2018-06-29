@@ -1,0 +1,2 @@
+class AlertStation < ApplicationRecord
+end

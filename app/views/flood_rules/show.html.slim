@@ -1,0 +1,39 @@
+p#notice = notice
+
+p
+  strong Station:
+  = @flood_rule.station
+p
+  strong Start date:
+  = @flood_rule.start_date
+p
+  strong End date:
+  = @flood_rule.end_date
+p
+  strong Without expiration:
+  = @flood_rule.without_expiration
+p
+  strong Operation:
+  = @flood_rule.operation
+p
+  strong Reference value:
+  = @flood_rule.reference_value
+p
+  strong Range value ini:
+  = @flood_rule.range_value_ini
+p
+  strong Range value end:
+  = @flood_rule.range_value_end
+p
+  strong Nickname:
+  = @flood_rule.nickname
+p
+  strong Description:
+  = @flood_rule.description
+p
+  strong Enable:
+  = @flood_rule.enable
+
+= link_to 'Edit', edit_flood_rule_path(@flood_rule)
+'|
+= link_to 'Back', flood_rules_path

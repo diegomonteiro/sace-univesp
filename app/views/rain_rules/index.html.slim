@@ -1,0 +1,41 @@
+h1 Listing rain_rules
+
+table
+  thead
+    tr
+      th Station
+      th Start date
+      th End date
+      th Without expiration
+      th Operation
+      th Reference value
+      th Range value ini
+      th Range value end
+      th Nickname
+      th Description
+      th Enable
+      th
+      th
+      th
+
+  tbody
+    - @rain_rules.each do |rain_rule|
+      tr
+        td = rain_rule.station
+        td = rain_rule.start_date
+        td = rain_rule.end_date
+        td = rain_rule.without_expiration
+        td = rain_rule.operation
+        td = rain_rule.reference_value
+        td = rain_rule.range_value_ini
+        td = rain_rule.range_value_end
+        td = rain_rule.nickname
+        td = rain_rule.description
+        td = rain_rule.enable
+        td = link_to 'Show', rain_rule
+        td = link_to 'Edit', edit_rain_rule_path(rain_rule)
+        td = link_to 'Destroy', rain_rule, data: { confirm: 'Are you sure?' }, method: :delete
+
+br
+
+= link_to 'New Rain rule', new_rain_rule_path

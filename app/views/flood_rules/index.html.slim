@@ -1,0 +1,41 @@
+h1 Listing flood_rules
+
+table
+  thead
+    tr
+      th Station
+      th Start date
+      th End date
+      th Without expiration
+      th Operation
+      th Reference value
+      th Range value ini
+      th Range value end
+      th Nickname
+      th Description
+      th Enable
+      th
+      th
+      th
+
+  tbody
+    - @flood_rules.each do |flood_rule|
+      tr
+        td = flood_rule.station
+        td = flood_rule.start_date
+        td = flood_rule.end_date
+        td = flood_rule.without_expiration
+        td = flood_rule.operation
+        td = flood_rule.reference_value
+        td = flood_rule.range_value_ini
+        td = flood_rule.range_value_end
+        td = flood_rule.nickname
+        td = flood_rule.description
+        td = flood_rule.enable
+        td = link_to 'Show', flood_rule
+        td = link_to 'Edit', edit_flood_rule_path(flood_rule)
+        td = link_to 'Destroy', flood_rule, data: { confirm: 'Are you sure?' }, method: :delete
+
+br
+
+= link_to 'New Flood rule', new_flood_rule_path

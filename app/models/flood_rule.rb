@@ -1,0 +1,2 @@
+class FloodRule < ApplicationRecord
+end

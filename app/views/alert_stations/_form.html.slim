@@ -1,0 +1,36 @@
+= form_for @alert_station do |f|
+  - if @alert_station.errors.any?
+    #error_explanation
+      h2 = "#{pluralize(@alert_station.errors.count, "error")} prohibited this alert_station from being saved:"
+      ul
+        - @alert_station.errors.full_messages.each do |message|
+          li = message
+
+  .field
+    = f.label :station
+    = f.text_field :station
+  .field
+    = f.label :alert_status
+    = f.text_field :alert_status
+  .field
+    = f.label :date
+    = f.datetime_field :date
+  .field
+    = f.label :description
+    = f.text_area :description
+  .field
+    = f.label :region
+    = f.text_area :region
+  .field
+    = f.label :severity
+    = f.text_field :severity
+  .field
+    = f.label :coordinates
+    = f.text_area :coordinates
+  .field
+    = f.label :verified
+    = f.check_box :verified
+  .field
+    = f.label :verified_for_user
+    = f.text_field :verified_for_user
+  .actions = f.submit
